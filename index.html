@@ -1,48 +1,131 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <style rel="stylesheet">
-    body {
-      background-color: black;
-    }
-
-    .header {
-      background-color: gray;
-    }
-
-    .article {
-      background-color: aqua;
-    }
-
-    .aside {
-      background-color: coral;
-    }
-
-    .footer {
-      background-color: blanchedalmond;
-    }
-  </style>
+    <title>HTML Learning Webpage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            color: white;
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        /*Start of styles for CSS Formatting*/
+        
+        /*Styles the header*/
+        
+        header {
+            background-color: #570447;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        /* Create two columns/boxes that float next to each other */
+        
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            background: #6A5466;
+            padding: 20px;
+            color: red;
+        }
+        
+        /*Sets the color of an unvisited link*/
+        a:link {
+            color: #3CF73C;
+        }
+        
+        /*Sets the color of a visited link*/
+        a:visited {
+            color:  #7FFFD4;
+        }
+        
+        /* Style the list inside the menu */
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #0B4002;
+            height: 300px;
+            /* only for demonstration, should be removed */
+        }
+        /* Clear floats after the columns */
+        
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Style the footer */
+        
+        footer {
+            background-color: #A20808;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        
+        @media (max-width: 600px) {
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+        /*End of styles for CSS formatting*/
+    </style>
 </head>
 
 <body>
-  <header class="header">
-    <h1>Header</h1>
-  </header>
 
-  <article class="article">
-    <h1>article</h1>
-  </article>
+<!--Start of HTML webpage layout-->
+    <h2>Learning HTML</h2>
+    <p>Going through this webpage you will learn the basics of HTML and how to do stuff in html. This webpage will not only teach you HTML but will also allow you to dive into the languages of Javascript and CSS</p>
+    <p>HTML stands for Hypertext Markup Language along side Javascript and CSS it can be used to create stunning webpages. HTML is used to design the layout of a website. CSS stands for Cascading Style Sheets. CSS is used to add a little flare to the webpage. It can be used to add color or even change the fonts or sizes of HTML elements.</p>
 
-  <aside class="aside">
-    <h1>aside</h1>
-  </aside>
+    <header>
+        <h2 id="CSSLayout">CSS Layout</h2>
+    </header>
 
-  <footer class="footer">
-    <h1>footer</h1>
-  </footer>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#CSSLayout">CSS Layouts</a></li>
+                <li><a href="#">Navigation Link 2</a></li>
+                <li><a href="#">Navigation Link 3</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>Article</h1>
+            <p>Paragraph</p>
+            <p>Paragraph</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+    
+    <!--End of HTML page layout-->
+    
+    
+
 </body>
 
 </html>
